@@ -1,0 +1,19 @@
+    .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(243, 246, 251);;
+    color: #100E20;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .step-connector {
+    width: 1px;
+    height: 60px;
+    border-left: 1px dashed #a7a8a9;
+    margin-left: 20px;
+  }
+  

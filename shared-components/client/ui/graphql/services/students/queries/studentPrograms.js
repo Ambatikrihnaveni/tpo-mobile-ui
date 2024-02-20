@@ -1,0 +1,151 @@
+import gql from "graphql-tag";
+
+export default gql`
+  query studentEnrolePrograms($type:String) {
+    studentEnrolePrograms(type:$type) {
+        _id
+        type
+        name
+        createdAt
+        createdBy
+        shopId
+        program_content
+        field
+        price
+        priceType
+        isPayment
+        modes
+        duration
+        tutors{
+          _id
+          emailRecords{
+              address
+              verified
+          }
+          profile{
+              isStatus
+              isApproved
+              availableDays
+              certificates
+              address
+              picture
+              price
+              qualification
+              categories
+              experience
+              bio
+              selectedToTime
+              selectedFromTime
+          }
+          userMedia {
+            _id
+            URLs {
+              thumbnail
+            }
+            priority
+          }
+          role
+          userId
+          isProfile
+          name
+          phoneNumber
+          moduleIds
+          modules{
+            _id
+            title
+          }
+        }
+        batches {
+          _id
+          name
+          batch_max_limit
+          batchStartTime
+          batchEndTime
+          seatsFilled
+          seatsAvailable
+          startDate
+          enrolementStartDate
+          enrolementEndDate
+          isPayment
+          certificate{
+            _id
+            templateImage
+          }
+          tutors{
+            _id
+            name
+            userMedia{
+              _id
+              URLs{
+                thumbnail
+              }
+            }
+          }
+        }
+        faqs {
+          faqType
+          qAndA{
+            question
+            answer
+          }
+        }
+        account{
+          _id
+          name
+          profile{
+            quizzes{
+              quizId
+              result
+
+            }
+          }
+        }
+        
+        programMedia {
+          _id
+          URLs {
+            small
+            medium
+            large
+            thumbnail
+          }
+          priority
+        }
+        products{
+          _id
+          title
+          lessonsDuration {
+            lesson{
+              _id
+              name
+              topics{
+                _id
+                topic_name
+                topic_content
+                createdAt
+              }
+              assignments{
+                _id
+                assignment_title
+                createdAt
+                createdBy
+              }
+              quizs{
+                _id
+                quiz_question
+                quiz_answer
+                quiz_hint
+                quiz_options{
+                  optionA
+                  optionB
+                  optionC
+                  optionD
+                }
+              }
+            }
+            lessonDuration
+          }
+        }
+      }
+    }
+`;

@@ -1,0 +1,58 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+
+  .textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+  }
+  
+  select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .file-attachment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .attach-icon {
+    margin-right: 5px;
+    color:aqua;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .send-button {
+    padding: 15px 30px; 
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end; 
+  }
+  
+  .send-button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,100 @@
+import gql from "graphql-tag";
+//import Lesson from "../fragments/lessonWithVariants"
+
+export default gql`
+  query studentGroups($shopId:ID!) {
+  studentGroups(shopId:$shopId){
+    _id
+    name
+    account{
+      _id
+      name
+    }
+    createdBy
+    createdAt
+    updatedAt
+    updatedBy
+    stream
+    selectedStartYear
+    selectedEndYear
+    inviteLink
+    studentEmailIds{
+      studentEmail
+      isInvited
+      isLogged
+    }
+    groupPrograms{
+      _id
+      name
+    }
+    trainingPartners{
+      _id
+      emailRecords{
+          address
+          verified
+      }
+      profile{
+          isStatus
+          isApproved
+          availableDays
+          certificates
+          address
+          picture
+          price
+          qualification
+          categories
+          experience
+          bio
+          selectedToTime
+          selectedFromTime
+      }
+      userMedia {
+        _id
+        URLs {
+          thumbnail
+        }
+        priority
+      }
+      role
+      userId
+      isProfile
+      name
+      phoneNumber
+    }
+    students{
+      _id
+      emailRecords{
+          address
+          verified
+      }
+      profile{
+          isStatus
+          isApproved
+          availableDays
+          certificates
+          address
+          picture
+          price
+          qualification
+          categories
+          experience
+          bio
+          selectedToTime
+          selectedFromTime
+      }
+      userMedia {
+        _id
+        URLs {
+          thumbnail
+        }
+        priority
+      }
+      role
+      userId
+      isProfile
+      name
+      phoneNumber
+    }
+  }
+}
+`;

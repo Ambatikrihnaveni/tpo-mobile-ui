@@ -1,0 +1,197 @@
+import gql from "graphql-tag";
+
+export default gql`
+  mutation updateAccount($input: UpdateAccountInput!) {
+    updateAccount(input: $input) {
+        account{
+      _id
+      bio
+      createdAt
+      currency {
+        code
+      }
+      firstName
+      language
+      lastName
+      name
+      note
+      primaryEmailAddress
+      updatedAt
+      username
+      profile{
+        addressBook {
+            company
+            fullName
+            address1
+            address2
+            city
+            region
+            postal
+            country
+            phone
+            isCommercial
+          }
+          accountName
+      bankName
+      ifscCode
+      accountNumber 
+      branch
+  qualification
+  price
+  experience
+  availableDays
+  availableTime
+  isApproved
+  isStatus
+  certificates
+  bio
+  address
+  picture
+  categories
+  institutes
+  year
+  status
+  selectedFromTime
+  selectedToTime
+  city
+  state
+  country
+  pincode
+  school_name
+  school_location
+  degree
+  field_of_study
+  graduation_month
+  graduation_year
+  graduation_score
+  surname
+  jobTitle
+  employer
+  company_location
+  start_month
+  start_year
+  end_month
+  end_year
+  isCurrentWorkingSameCompany
+  jobTitleSkills
+  jobTitleSummary
+  summary
+  website
+  coursesOffered
+  achievements
+  socialMediaLinks{
+    socialMediaAccount
+    link
+  }
+      }
+      adminUIShops {
+        _id
+        brandAssets {
+          navbarBrandImage {
+            large
+          }
+        }
+        name
+        shopLogoUrls {
+          primaryShopLogoUrl
+        }
+      }
+      role
+     
+      phoneNumber
+      isProfile
+      userMedia{
+        URLs{
+          large
+          medium
+          small
+        }
+        _id
+        priority
+        productId
+        variantId
+        programId
+      }
+      isCollegeDetails
+      programs{
+        _id
+        name
+        type
+        field
+        shopId
+        createdBy
+        program_content
+        createdAt
+        productIds
+        products{
+            _id
+            createdAt
+            createdBy
+            account{
+                _id
+                name
+            }
+        }
+        price
+        priceType
+        batches{
+            _id
+            name
+            programType
+            createdAt
+            createdBy
+            updatedAt
+            batch_number
+            batch_max_limit
+            seatsFilled
+            seatsAvailable
+            batchStartTime
+            batchEndTime
+            startDate
+            students{
+                _id
+                name
+            }
+            tutors{
+                _id
+                name 
+            }
+            admins{
+                _id
+                name
+            }
+            lessonsDuration{
+                lessonDuration
+                lessonStatus
+
+            }
+        }
+        isApproved
+        status
+        duration
+        faqs{
+faqType
+qAndA{
+  question
+  answer
+}
+        }
+        isPublished
+        account{
+            _id
+            name
+        }
+        programMedia{
+_id
+productId
+variantId
+programId
+
+        }
+
+      }
+    }
+    }
+  }
+`;
+
